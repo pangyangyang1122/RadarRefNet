@@ -103,7 +103,7 @@ The repository is currently being organized. The complete implementation and ann
 Installation instructions will be provided with the code release.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RadarRefNet.gitRadarRefNet
+git clone https://github.com/pangyangyang1122
 cd RadarRefNet
 ```
 
