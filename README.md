@@ -1,7 +1,4 @@
 # RadarRefNet
-Language-Guided Referring Expression Comprehension on mmWave Radar for Road Scene Understanding.
-
-# RadarRefNet
 
 Official repository for **“Language-Guided mmWave Radar Referring Expression Comprehension for Road Scene Understanding”**.
 
@@ -106,7 +103,7 @@ The repository is currently being organized. The complete implementation and ann
 Installation instructions will be provided with the code release.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RadarRefNet.git
+git clone https://github.com/YOUR_USERNAME/RadarRefNet.gitRadarRefNet
 cd RadarRefNet
 ```
 
@@ -134,7 +131,5 @@ If you find this work useful, please consider citing our paper:
 > Citation information will be updated after publication.
 
 ## Acknowledgement
-
-This work is supported by the National Natural Science Foundation of China under Grant Nos. 62476205 and 62301405.
 
 We thank the authors of RADDet and the open-source community for their contributions to radar perception research.
