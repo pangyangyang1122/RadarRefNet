@@ -5,7 +5,7 @@ Official repository for **“Language-Guided mmWave Radar Referring Expression C
 RadarRefNet introduces **Referring Expression Comprehension (REC)** into dense 3D Range–Azimuth–Doppler (RAD) spectra, enabling natural-language-guided instance localization for mmWave radar perception.
 
 <p align="center">
-  <img src="assets/teaser.png" width="90%">
+  <img src="assets/dataset_visualize_only_text2.pdf" width="90%">
 </p>
 
 ## Overview
@@ -30,10 +30,10 @@ It contains:
 
 Structured target attributes are further used during dataset construction and radar region–attribute semantic alignment.
 
-> The original radar data are not redistributed in this repository. Please obtain the RADDet dataset from its official source and use the provided annotations and processing scripts to construct RADDet-REC.
+> The original radar data are available from the official RADDet repository at \url{https://github.com/ZhangAoCanada/RADDet.git}. The natural-language referring expression annotations of RADDet-REC will be provided in the Dataset directory of this repository.
 
 <p align="center">
-  <img src="assets/dataset_pipeline.png" width="90%">
+  <img src="assets/Referring_Expression_Generation.pdf" width="90%">
 </p>
 
 ## RadarRefNet
@@ -52,21 +52,27 @@ The framework contains:
 TGRFM injects global referring semantics into radar feature extraction, while multi-level radar–text cross-attention enables fine-grained interaction between linguistic tokens and hierarchical radar representations.
 
 <p align="center">
-  <img src="assets/framework.png" width="95%">
+  <img src="assets/Method.pdf" width="95%">
 </p>
 
 ## Progressive Three-Stage Training
 
-RadarRefNet is trained using a progressive three-stage strategy:
+To progressively bridge radar spectral representations and free-form natural language, RadarRefNet is trained using a three-stage strategy:
 
 1. **Radar MAE Pretraining**  
-   Learns intrinsic RAD-spectrum representations through masked reconstruction.
+   The radar encoder is first pretrained with a masked autoencoder (MAE) objective to learn intrinsic amplitude relationships and robust representations from 3D RAD spectra.
 
 2. **Radar Region–Attribute Semantic Alignment**  
-   Establishes fine-grained correspondence between localized radar regions and structured target attribute semantics.
+   Structured target attributes are introduced as an intermediate semantic bridge to establish fine-grained correspondence between localized radar regions and attribute semantics such as target category, distance, relative direction, motion state, and risk level.
 
 3. **Natural-Language REC Fine-Tuning**  
-   Transfers the learned cross-modal correspondence to free-form natural-language referring expressions.
+   The learned radar–semantic correspondence is further transferred to free-form natural-language referring expressions for language-guided target instance localization.
+
+The three stages progressively perform **RAD-spectrum representation learning**, **region–attribute semantic alignment**, and **natural-language grounding**, providing an effective initialization for the final radar REC task.
+
+<p align="center">
+  <img src="assets/training_strategy.pdf" width="95%">
+</p>
 
 ## Main Results
 
@@ -81,7 +87,7 @@ RadarRefNet achieves:
 Experiments further show that language guidance improves target localization and provides notable gains on tail classes.
 
 <p align="center">
-  <img src="assets/qualitative.png" width="95%">
+  <img src="assets/performance_visulize.pdf" width="95%">
 </p>
 
 ## Code and Data
@@ -103,7 +109,7 @@ The repository is currently being organized. The complete implementation and ann
 Installation instructions will be provided with the code release.
 
 ```bash
-git clone https://github.com/pangyangyang1122
+git clone https://github.com/pangyangyang1122/RadarRefNet.git
 cd RadarRefNet
 ```
 
