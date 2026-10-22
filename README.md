@@ -5,7 +5,7 @@ Official repository for **“Language-Guided mmWave Radar Referring Expression C
 RadarRefNet introduces **Referring Expression Comprehension (REC)** into dense 3D Range–Azimuth–Doppler (RAD) spectra, enabling natural-language-guided instance localization for mmWave radar perception.
 
 <p align="center">
-  <img src="assets/dataset_visualize_only_text2.pdf" width="90%">
+  <img src="assets/dataset_visualize_only_text2.png" width="90%">
 </p>
 
 ## Overview
@@ -33,7 +33,7 @@ Structured target attributes are further used during dataset construction and ra
 > The original radar data are available from the official RADDet repository at \url{https://github.com/ZhangAoCanada/RADDet.git}. The natural-language referring expression annotations of RADDet-REC will be provided in the Dataset directory of this repository.
 
 <p align="center">
-  <img src="assets/Referring_Expression_Generation.pdf" width="90%">
+  <img src="assets/Referring_Expression_Generation.png" width="90%">
 </p>
 
 ## RadarRefNet
@@ -52,7 +52,7 @@ The framework contains:
 TGRFM injects global referring semantics into radar feature extraction, while multi-level radar–text cross-attention enables fine-grained interaction between linguistic tokens and hierarchical radar representations.
 
 <p align="center">
-  <img src="assets/Method.pdf" width="95%">
+  <img src="assets/Method.png" width="95%">
 </p>
 
 ## Progressive Three-Stage Training
@@ -71,7 +71,7 @@ To progressively bridge radar spectral representations and free-form natural lan
 The three stages progressively perform **RAD-spectrum representation learning**, **region–attribute semantic alignment**, and **natural-language grounding**, providing an effective initialization for the final radar REC task.
 
 <p align="center">
-  <img src="assets/training_strategy.pdf" width="95%">
+  <img src="assets/training_strategy.png" width="95%">
 </p>
 
 ## Main Results
@@ -87,7 +87,7 @@ RadarRefNet achieves:
 Experiments further show that language guidance improves target localization and provides notable gains on tail classes.
 
 <p align="center">
-  <img src="assets/performance_visulize.pdf" width="95%">
+  <img src="assets/performance_visulize.png" width="95%">
 </p>
 
 ## Code and Data
