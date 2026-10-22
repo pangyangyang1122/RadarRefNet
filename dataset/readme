@@ -97,7 +97,7 @@ The structured target attributes serve as intermediate semantic descriptors rath
 
 To use RADDet-REC:
 
-1. Download the original RADDet radar data from the official RADDet repository.
+1. Download the original RADDet radar data from the official RADDet repository \url{https://github.com/ZhangAoCanada/RADDet.git}.
 2. Place the RADDet data according to the directory structure required by the provided preprocessing scripts.
 3. Download the RADDet-REC annotation files from this directory.
 4. Use the `.jsonl` files for natural-language REC training and evaluation.
