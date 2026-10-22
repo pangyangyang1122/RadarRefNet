@@ -112,14 +112,23 @@ Installation instructions will be provided with the code release.
 git clone https://github.com/pangyangyang1122/RadarRefNet.git
 cd RadarRefNet
 ```
+## RADDet-REC
 
-## Dataset Preparation
+**RADDet-REC** is constructed based on the original RADDet dataset and provides natural-language referring expressions for radar target instances.
 
-Please first download the original **RADDet** dataset from its official source.
+The original radar data can be obtained from the official RADDet repository:
+https://github.com/ZhangAoCanada/RADDet
 
-The RADDet-REC annotations and conversion scripts provided in this repository can then be used to prepare the language-guided radar REC benchmark.
+The dataset generation scripts, RADDet-REC natural-language referring expression annotations, and structured target attribute annotations used for semantic alignment are provided in the [`datasets/`](./datasets) directory.
 
-Detailed instructions will be provided soon.
+In particular, the `datasets/` directory includes:
+
+- scripts for generating RADDet-REC annotations;
+- natural-language REC annotation files for training and testing;
+- structured target attribute files, such as `structured_attributes_train.csv` and `structured_attributes_test.csv`;
+- detailed instructions for dataset preparation and annotation formats.
+
+Please refer to [`datasets/README.md`](./datasets/README.md) for more details.
 
 ## Citation
 
